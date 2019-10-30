@@ -1,51 +1,12 @@
 {
-  "name": "__MSG_appName__",
-  "version": "0.0.1",
-  "manifest_version": 2,
-  "description": "__MSG_appDescription__",
-  "chrome_url_overrides" : {
-      "newtab": "startpage/index.html"
-  },
-  "icons": {
-    "16": "icons/icon-16.png",
-    "128": "icons/icon-128.png"
-  },
-  "default_locale": "en",
-  "background": {
-    "scripts": [
-      "scripts/background.js"
-    ]
-  },
-  "permissions": [
-    "tabs",
-    "storage",
-    "http://*/*",
-    "https://*/*"
-  ],
-  "options_ui": {
-    "page": "options.html"
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "http://*/*",
-        "https://*/*"
-      ],
-      "js": [
-        "scripts/contentscript.js"
-      ],
-      "run_at": "document_end",
-      "all_frames": false
-    }
-  ],
-  "browser_action": {
-    "default_icon": {
-      "19": "icons/icon-19.png",
-      "38": "icons/icon-38.png"
-    },
-    "default_title": "Extension Boilerplate",
-    "default_popup": "popup.html"
+    "name": "Tab Garden",
+    "description": "Display garden on the new tab page",
+    "version": "0.1",
+    "incognito": "split",
+    "content_security_policy": "script-src 'self' https://code.jquery.com; object-src 'self'",
+    "chrome_url_overrides": {"newtab": "start-page.html"},
+    "permissions": ["bookmarks", "history", "storage"],
+    "manifest_version": 2
   }
-}
 
 
