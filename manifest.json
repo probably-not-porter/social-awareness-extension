@@ -1,6 +1,6 @@
 {
-    "name": "Tab Garden",
-    "description": "Display garden on the new tab page",
+    "name": "Solar Polar",
+    "description": "Display solar system clock on the new tab page",
     "version": "0.1",
     "incognito": "split",
     "content_security_policy": "script-src 'self' https://code.jquery.com; object-src 'self'",
