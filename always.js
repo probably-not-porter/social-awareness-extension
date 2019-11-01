@@ -31,17 +31,17 @@ function startTime() {
     x_h = Math.sin(r_h) * 200;
     p_h = document.getElementById('hours');
     p_h.innerHTML = h;
-    p_h.style.right = ((width / 2 - 25) + (x_h)) + 'px';
-    p_h.style.top = ((height / 2 - 25) + (y_h)) + 'px';
+    p_h.style.right = ((width / 2 - 50) + (x_h)) + 'px';
+    p_h.style.top = ((height / 2 - 50) + (y_h)) + 'px';
 
     // Create Minute sat
-    var r_m = ((m + (s / 60)) / 60) * (2 * Math.PI) + Math.PI;
-    y_m = -1* Math.cos(r_m+ Math.PI) * 295;
-    x_m = Math.sin(r_m) * 295;
+    var r_m = ((m + (s/60)) / 60) * (2 * Math.PI) + Math.PI;
+    y_m = -1* Math.cos(r_m+ Math.PI) * 300;
+    x_m = Math.sin(r_m) * 300;
     p_m = document.getElementById('minutes');
     p_m.innerHTML = m;
-    p_m.style.right = ((width / 2 - 25) + (x_m)) + 'px';
-    p_m.style.top = ((height / 2 - 25) + (y_m)) + 'px';
+    p_m.style.right = ((width / 2 - 37.5) + (x_m)) + 'px';
+    p_m.style.top = ((height / 2 - 37.5) + (y_m)) + 'px';
 
     
 
