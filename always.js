@@ -26,7 +26,10 @@ function startTime() {
     y_h = -1* Math.cos(r_h+ Math.PI) * height * 0.20;
     x_h = Math.sin(r_h) * height * 0.20;
     p_h = document.getElementById('hours');
-    p_h.innerHTML = "<span style='font-size:50px;'>"+ (h % 13 + 1) +"</span>";
+    if (h % 13 == 0){
+        h = 12
+    }
+    p_h.innerHTML = "<span style='font-size:50px;'>"+ (h % 13) +"</span>";
     p_h.style.right = ((width / 2 - 50) + (x_h)) + 'px';
     p_h.style.top = ((height / 2 - 50) + (y_h)) + 'px';
 
