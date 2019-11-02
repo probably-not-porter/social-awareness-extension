@@ -15,6 +15,7 @@ function startTime() {
     c_h.style.right = ((width / 2) - height * 0.20) + 'px';
     c_h.style.top = ((height / 2) - height * 0.20) + 'px';
 
+
     var h = today.getHours();
     var m = today.getMinutes();
     var s = today.getSeconds();
@@ -25,7 +26,7 @@ function startTime() {
     y_h = -1* Math.cos(r_h+ Math.PI) * height * 0.20;
     x_h = Math.sin(r_h) * height * 0.20;
     p_h = document.getElementById('hours');
-    p_h.innerHTML = "<span style='font-size:40px;'>"+h+"</span>";
+    p_h.innerHTML = "<span style='font-size:50px;'>"+ (h % 13 + 1) +"</span>";
     p_h.style.right = ((width / 2 - 50) + (x_h)) + 'px';
     p_h.style.top = ((height / 2 - 50) + (y_h)) + 'px';
 
@@ -34,7 +35,13 @@ function startTime() {
     y_m = -1* Math.cos(r_m+ Math.PI) * height * 0.30;
     x_m = Math.sin(r_m) * height * 0.30;
     p_m = document.getElementById('minutes');
-    p_m.innerHTML = "<span style='font-size:25px;'>"+m+"</span>";
+    var min_out = "";
+    if (m < 10){
+        min_out = "0" + m;
+    }else{
+        min_out = "" + m;
+    }
+    p_m.innerHTML = "<span style='font-size:35px;'>" + min_out + "</span>";
     p_m.style.right = ((width / 2 - 37.5) + (x_m)) + 'px';
     p_m.style.top = ((height / 2 - 37.5) + (y_m)) + 'px';
 
@@ -45,10 +52,31 @@ function startTime() {
     y_s = Math.cos(r_s+ Math.PI) * height * 0.40;
     x_s = -1* Math.sin(r_s) * height * 0.40;
     p_s = document.getElementById('seconds');
-    p_s.innerHTML = s;
-    p_s.style.right = ((width / 2 - 25) + (x_s)) + 'px';
-    p_s.style.top = ((height / 2 - 25) + (y_s)) + 'px';
+    var sec_out = "";
+    if (s < 10){
+        sec_out = "0" + s;
+    }else{
+        sec_out = "" + s
+    }
+    p_s.innerHTML = "<span style='font-size:25px;'>"+sec_out+"</span>";
+    sec_x = (width / 2 - 25) + (x_s);
+    sec_y = (height / 2 - 25) + (y_s);
 
+    p_s.style.right = sec_x + 'px';
+    p_s.style.top = sec_y + 'px';
+
+    // Create Millisecond sat
+    var r_ms = (ms / 1000) * (2 * Math.PI);
+    y_ms = Math.cos(r_ms+ Math.PI) * height * 0.05;
+    x_ms = -1* Math.sin(r_ms) * height * 0.05;
+    p_ms = document.getElementById('milliseconds');
+    msec_x = (sec_x +20) + (x_ms);
+    msec_y = (sec_y +20) + (y_ms);
+
+    p_ms.style.right = msec_x + 'px';
+    p_ms.style.top = msec_y + 'px';
+
+    
 
     // create sun
     var sun = document.getElementById('sun');

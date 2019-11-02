@@ -12,19 +12,34 @@ body, html{
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;         /* Opera/IE 8+ */
-  }
+}
+body{
+    background-image: url('https://cdn1.epicgames.com/ue/item/store_spacebox_dark_screenshot_6-1920x1080-16c53ce3fe77c9473f64ca81beee0cc1.png');
+}
 
+#milliseconds{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50px;
+    position: absolute;
+    text-align:center;
+    vertical-align:middle;
+    line-height: 25px;
+    padding-top: 6px;
+    box-shadow: 0px 0px  10px white;
+}
 #seconds{
     width: 50px;
     height: 50px;
     background-color: white;
     border-radius: 50px;
     position: absolute;
-    border: 10px solid black;
     text-align:center;
     vertical-align:middle;
     line-height: 25px;
-    
+    padding-top: 12px;
+    box-shadow: 0px 0px  10px white;
 }
 #minutes{
     width: 75px;
@@ -32,11 +47,11 @@ body, html{
     background-color: white;
     border-radius: 75px;
     position: absolute;
-    border: 10px solid black;
     text-align:center;
     vertical-align:middle;
     line-height: 50px;
-    
+    padding-top: 12px;
+    box-shadow: 0px 0px  15px white;
 }
 #hours{
     width: 100px;
@@ -44,10 +59,11 @@ body, html{
     background-color: white;
     border-radius: 100px;
     position: absolute;
-    border: 10px solid black;
     text-align:center;
     vertical-align:middle;
     line-height: 80px;
+    padding-top: 8px;
+    box-shadow: 0px 0px  20px white;
 }
 #sun{
     width: 150px;
@@ -56,7 +72,7 @@ body, html{
     border-radius: 100px;
     position: absolute;
     z-index: -1;
-    box-shadow: 0px 0px  100px white;
+    box-shadow: 0px 0px  50px white;
 }
 .circle{
     border: 1px solid rgba(150,150,150,0.5);
