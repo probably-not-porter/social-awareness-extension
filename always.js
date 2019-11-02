@@ -84,7 +84,7 @@ function startTime() {
     sun.style.top = (height / 2 - 75) + 'px';
 
     // Recur loop
-    var t = setTimeout(startTime, 20);
+    var t = setTimeout(startTime, 30);
 }
 function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
