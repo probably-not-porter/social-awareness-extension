@@ -1,7 +1,7 @@
 {
     "name": "Solar Polar",
     "description": "Display solar system clock on the new tab page",
-    "version": "0.1",
+    "version": "1.0",
     "incognito": "split",
     "content_security_policy": "script-src 'self' https://code.jquery.com; object-src 'self'",
     "chrome_url_overrides": {"newtab": "start-page.html"},

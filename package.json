@@ -1,6 +1,6 @@
 {
   "name": "solar-polar",
-  "version": "0.0.1",
+  "version": "1.0",
   "description": "clock extension for new tab page",
   "scripts": {
     "chrome-build": "cross-env TARGET=chrome gulp",
